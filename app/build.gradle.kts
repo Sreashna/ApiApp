@@ -57,6 +57,7 @@ dependencies {
     implementation ("androidx.compose.foundation:foundation:1.0.0")
     // For LazyVerticalGrid
     implementation ("androidx.compose.foundation:foundation-layout:1.0.0")
+    implementation ("com.facebook.shimmer:shimmer:0.5.0")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0-alpha01")
