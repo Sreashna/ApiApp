@@ -25,8 +25,6 @@ fun ShimmerItem() {
             repeatMode = RepeatMode.Restart
         )
     )
-
-    // Get density to convert dp to px
     val density = LocalDensity.current
 
     val shimmerBrush = remember(density) {

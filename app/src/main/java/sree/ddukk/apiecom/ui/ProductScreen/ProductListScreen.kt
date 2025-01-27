@@ -28,7 +28,7 @@ fun ProductListScreen(viewModel: ProductViewModel = viewModel(), navController: 
     ) {
         if (isLoading) {
             items(6) {
-                ShimmerItem() // Show shimmer loading placeholders
+                ShimmerItem() 
             }
         } else {
             items(products) { product ->
@@ -37,7 +37,6 @@ fun ProductListScreen(viewModel: ProductViewModel = viewModel(), navController: 
                     navController = navController,
                     isLoading = false
                 ) {
-                    // Navigate to ProductDetailScreen, passing the product data as JSON
                     val productJson = Uri.encode(gson.toJson(product))
                     navController.navigate("productDetail/$productJson")
                 }
@@ -45,7 +44,3 @@ fun ProductListScreen(viewModel: ProductViewModel = viewModel(), navController: 
         }
     }
 }
-
-
-
-

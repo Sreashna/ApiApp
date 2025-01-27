@@ -21,16 +21,15 @@ class ProductViewModel : ViewModel() {
 
     private fun fetchProducts() {
         viewModelScope.launch {
-            _isLoading.value = true // Set loading to true
+            _isLoading.value = true
             try {
-                // Simulate network delay for demonstration
                 delay(2000)
                 val response = RetrofitClient.apiService.getAllProducts()
                 _products.value = response
             } catch (e: Exception) {
                 e.printStackTrace()
             } finally {
-                _isLoading.value = false // Set loading to false
+                _isLoading.value = false
             }
         }
     }
