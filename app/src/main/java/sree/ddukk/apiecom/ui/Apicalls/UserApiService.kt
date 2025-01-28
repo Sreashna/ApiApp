@@ -5,5 +5,5 @@ import sree.ddukk.apiecom.ui.Models.User
 
 interface UserApiService {
     @GET("api/v1/users")
-    suspend fun getUsers(): List<User> // Make this a suspend function
+    fun getUsers(): List<User>
 }

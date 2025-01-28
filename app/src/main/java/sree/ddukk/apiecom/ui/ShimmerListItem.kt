@@ -15,13 +15,12 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ShimmerItem() {
-    // Remember an infinite animation for shimmer offset
     val shimmerTransition = rememberInfiniteTransition()
     val shimmerOffset by shimmerTransition.animateFloat(
         initialValue = -1f,
         targetValue = 1f,
         animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 700, easing = LinearEasing), // Fast shimmer (700ms)
+            animation = tween(durationMillis = 700, easing = LinearEasing),
             repeatMode = RepeatMode.Restart
         )
     )
@@ -34,12 +33,11 @@ fun ShimmerItem() {
                 Color.LightGray.copy(alpha = 0.6f),
                 Color.Gray.copy(alpha = 0.3f)
             ),
-            startX = shimmerOffset * 300f * density.density, // 300.dp.toPx()
-            endX = shimmerOffset * 600f * density.density    // 600.dp.toPx()
+            startX = shimmerOffset * 300f * density.density,
+            endX = shimmerOffset * 600f * density.density
         )
     }
 
-    // Shimmer layout
     Column(
         modifier = Modifier
             .padding(8.dp)

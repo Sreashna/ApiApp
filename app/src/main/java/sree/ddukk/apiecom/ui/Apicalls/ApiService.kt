@@ -5,5 +5,5 @@ import sree.ddukk.apiecom.ui.Models.modelItem
 
 interface ApiService {
     @GET("products")
-    suspend fun getAllProducts(): List<modelItem>
+    fun getAllProducts(): List<modelItem>
 }

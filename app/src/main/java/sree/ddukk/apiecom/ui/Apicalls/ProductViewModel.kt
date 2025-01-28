@@ -18,7 +18,6 @@ class ProductViewModel : ViewModel() {
     init {
         fetchProducts()
     }
-
     private fun fetchProducts() {
         viewModelScope.launch {
             _isLoading.value = true

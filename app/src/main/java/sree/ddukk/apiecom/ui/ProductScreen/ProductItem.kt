@@ -23,18 +23,18 @@ fun ProductItem(
     product: modelItem,
     navController: NavController,
     isLoading: Boolean,
-    onClick: () -> Unit // Pass navigation logic as a lambda
+    onClick: () -> Unit
 ) {
     if (isLoading) {
-        ShimmerItem() // Render the shimmer effect
+        ShimmerItem()
     } else {
         Card(
             modifier = Modifier
                 .padding(8.dp)
                 .fillMaxWidth()
                 .height(250.dp)
-                .clickable(onClick = onClick), // Trigger onClick when clicked
-            shape = RoundedCornerShape(16.dp),
+                .clickable(onClick = onClick),
+            shape = RoundedCornerShape(16.dp)
         ) {
             Column(
                 modifier = Modifier
@@ -58,7 +58,7 @@ fun ProductItem(
                     text = product.title,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black,
+                    color = DarkRed,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier
@@ -70,7 +70,7 @@ fun ProductItem(
                     text = "Price: ₹${product.price}",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
-                    color = Color.Red,
+                    color = CrimsonRed,
                     modifier = Modifier
                         .align(Alignment.Start)
                         .padding(horizontal = 8.dp)
